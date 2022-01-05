@@ -1,0 +1,14 @@
+# Byte Compiled
+__pycache__/
+
+# MacOS
+.DS_Store
+
+# Poetry
+poetry.lock
+
+# PyCharm
+.idea/
+
+# Visual Studio Code
+.vscode/
