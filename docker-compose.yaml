@@ -1,0 +1,12 @@
+services:
+  postgresql:
+    container_name: postgresql
+    environment:
+      - POSTGRES_DB=sqlsimple
+      - POSTGRES_PASSWORD=sqlsimple
+      - POSTGRES_USER=sqlsimple
+    image: postgres:13
+    ports:
+      - '5432:5432'
+
+version: '3'
