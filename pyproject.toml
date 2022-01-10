@@ -1,3 +1,6 @@
+[build-system]
+requires = ["poetry-core"]
+
 [tool.poetry]
 authors = ["Bernardo Couto <bernardocouto.py@gmail.com>"]
 classifiers = [
@@ -29,3 +32,6 @@ python = "^3.6.1"
 [tool.poetry.dev-dependencies]
 mkdocs = "^1.2.3"
 mkdocs-material = "^8.1.4"
+
+[tool.poetry-version-plugin]
+source = "init"
