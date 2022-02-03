@@ -18,12 +18,16 @@ CONFIGURATION = Configuration.instance(
 )
 
 
-class TestDefault(unittest.TestCase):
+class TestDefault(
+    unittest.TestCase
+):
 
     database = None
 
     @classmethod
-    def setUpClass(cls):
+    def setUpClass(
+        cls
+    ):
         cls.database = Database(CONFIGURATION)
         with cls.database as connection:
             (
@@ -41,7 +45,9 @@ class TestDefault(unittest.TestCase):
             )
 
     @classmethod
-    def tearDownClass(cls):
+    def tearDownClass(
+        cls
+    ):
         cls.database = Database(CONFIGURATION)
         with cls.database as connection:
             (
@@ -53,10 +59,14 @@ class TestDefault(unittest.TestCase):
                 )
             )
 
-    def setUp(self):
+    def setUp(
+        self
+    ):
         self.database = Database(CONFIGURATION)
 
-    def test_find_all(self):
+    def test_find_all(
+        self
+    ):
         with self.database as connection:
             result = (
                 connection
@@ -68,7 +78,9 @@ class TestDefault(unittest.TestCase):
             self.assertEqual(len(result), 0)
             self.assertEqual(type(result), list)
 
-    def test_find_all_with_file(self):
+    def test_find_all_with_file(
+        self
+    ):
         with self.database as connection:
             result = (
                 connection
@@ -78,7 +90,9 @@ class TestDefault(unittest.TestCase):
             self.assertEqual(len(result), 0)
             self.assertEqual(type(result), list)
 
-    def test_find_by_id(self):
+    def test_find_by_id(
+        self
+    ):
         with self.database as connection:
             result = (
                 connection
@@ -90,7 +104,9 @@ class TestDefault(unittest.TestCase):
             )
             self.assertEqual(result, None)
 
-    def test_find_by_id_with_file(self):
+    def test_find_by_id_with_file(
+        self
+    ):
         with self.database as connection:
             result = (
                 connection
