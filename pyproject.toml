@@ -33,6 +33,3 @@ python = "^3.6.1"
 [tool.poetry.dev-dependencies]
 mkdocs = "^1.2.3"
 mkdocs-material = "^8.1.9"
-
-[tool.poetry-version-plugin]
-source = "init"
